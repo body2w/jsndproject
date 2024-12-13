@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+      h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 40px;
+      }
+      .btn {
+      background-color: red;
+        padding: 15px;
+        color: white;
+        font-size: 1.2rem;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 1px 2px rgb(172, 159, 159);
+        cursor: pointer;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>
+      يمكنك حساب الكمية الكاملة التي يمكنك شراؤها من هذا المنتج بناءً على سعره
+      والمبلغ الذي تمتلكه، دون احتساب الأجزاء الكسرية
+    </h1>
+    <button class="btn" onclick="data()">أضغط هنا</button>
+    <script>
+      function data() {
+        var unitPrice = prompt("ايه ثمن الوحده من الحاجه دي");
+        var money = prompt("هتشتري بقد أيه ؟");
+        var numOfUnits = Math.floor(money / unitPrice);
+        var chanse = money - numOfUnits * unitPrice;
+        alert(
+          " ممكن تشتري " + numOfUnits + " كيلو/لتر " + ", " + "الباقي " + chanse
+        );
+      }
+    </script>
+  </body>
+</html>
